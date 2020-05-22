@@ -1,0 +1,453 @@
+/* ESTILO MENU DE CABECERA*/
+
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+body {background:#FEFEFE;}
+
+section {
+	padding: 5px;
+	padding-top: 70px;
+}
+
+.menu_bar {
+	display:none;
+	max-height: 40px;
+}
+
+header {
+	width: 100%;
+}
+
+header nav {
+	background:#023859;
+	z-index:1000;
+	max-width: 1000px;
+	width: 95%;
+	margin:20px auto;
+	top: 40px;
+}
+
+header nav ul {
+	list-style:none;
+}
+
+header nav ul li {
+	display:inline-block;
+	/*Usamos floar y no inline-blockporque no no s epuede usar overflows en el header nav ul*/
+	position: relative;
+}
+
+/*Submenu*/
+
+header nav ul li:hover .children {
+	display: block;
+}
+
+header nav ul li .children {
+	background:#011826;
+	position: absolute;
+	display: none;
+	width: 150%;
+	z-index: 1000;
+}
+
+header nav ul li .children li {
+	display: block;
+	overflow: hidden; /*Necesitamos usar floar*/
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+header nav ul li .children li a {
+	display: block;
+}
+
+header nav ul .children li a span {
+	float: right;
+	position: relative;
+	top:3px;
+	margin-right: 0px;
+	margin-left:10px;
+}
+
+header nav ul li a {
+	color:#fff;
+	text-decoration: none;
+	display: inline-block;
+	padding:20px;
+}
+
+header nav ul li:hover {
+	background:#E6344A;
+}
+
+header nav ul li span {
+	margin-right:10px;
+}
+
+header nav ul li .caret {
+	position: relative;
+	top: 3px;
+	margin-left: 10px;
+	margin-right: 0;
+}
+
+@media screen and (max-width:800px) {
+	body {
+		padding-top:100px;
+	}
+	.menu_bar {
+		width: 100%;
+		background:#E6344A;
+		display: block;
+		position: fixed;
+		top:0;
+	}
+
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 10px;
+		color:#fff;
+		overflow: hidden;
+		font-size:25px;
+		font-weight:bold;
+		text-decoration: none;
+	}
+
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 200px;
+		height: calc(100% - 80px);
+		right:100%; 
+		/*Ocultamos el menu hacia la derecha*/
+		margin: 0;
+		position:fixed;
+		overflow:scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+	header nav ul li a {
+		display: block;
+	}
+
+	/*Submenu*/
+
+	header nav ul li:hover .children{
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a{
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+}
+
+
+/* ESTILO MENU BARRA FIJA*/
+
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 300px; /* Bajamos la barra de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+ 
+	.social ul {
+		list-style: none;
+	}
+ 
+ 	.social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+		.social ul li .icon-twitter {background: #00abf0;}
+		.social ul li .icon-instagram {background: #d95232;}
+		.social ul li .icon-youtube {background: #ae181f;}
+		.social ul li .icon-mail {background: #666666;}
+
+		.social ul li a { /* Cambiamos tamaño cuando el usuario pase el ratón*/
+			display: inline-block;
+			color:#fff;
+			background: #000;
+			padding: 10px 15px;
+			text-decoration: none;
+			-webkit-transition:all 500ms ease; /* Tiempos de transición */
+			-o-transition:all 500ms ease;
+			transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+		}
+		 
+		.social ul li a:hover { /* Cambiamos tamaño cuando el usuario pase el ratón*/
+			background: #000; 
+			padding: 10px 30px; /* Hacemos mas grande el espacio al pasar el ratón*/
+		}
+
+
+
+/*CROWFOUNDING*/
+
+.crowfounding {
+	position: absolute; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	right: 0; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+ 
+	.crowfounding ul {
+		list-style: none;
+	}
+ 
+	.crowfounding ul li a {
+		display: inline-block;
+		color:#fff;
+		padding: 0; /*Tamaño sin seleccionar*/
+		margin: 0;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+  
+	.crowfounding ul li a:hover {
+		width: 220px;
+		height: 220px;
+	}
+
+
+/*FONDO Y ARTÍCULOS*/
+
+	* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ 
+body {
+	background:url(../img/bg.jpg); /* Nuestra imagen de fondo */
+	background-repeat:repeat; /* Indicamos que se repetira */
+	background-size:cover; /* Encajamos la imagen al 100% del ancho */
+	background-attachment: fixed; /* Establecemos una posicion fija para la imagen */
+	font-family:helvetica, arial, sans-serif;
+	line-height:20px;
+}
+
+.boton-inicio {
+	background-image:url(../img/inicio.png);
+	width: 40px;
+	height: 40px;
+}
+
+
+.boton-atras {
+	border: none;
+}
+
+boton-atras a img{
+	display:block;
+	margin:auto;
+	width: 40px;
+	height: 40px;
+}
+
+.contenedor { /* Dimensiones del contenedor que tiene los artículos */
+	width: 90%;
+	max-width:900px;
+	margin:auto;
+	padding-top: 20px;
+}
+
+@media screen and (max-width:1000px ) { /* Dimension horizontal del artículo si la pantalla es grande */
+article {
+	width: 80%;
+	background:rgba(24,8,33,.9);
+	padding:20px;
+	margin:20px 0;
+	color:#fff;
+	box-shadow:0 5px 5px 3px rgba(0, 0, 0, 0.25);
+	}
+}
+
+@media screen and (min-width:1000px ) { /* Dimension horizontal del artículo si la pantalla es pequeña */
+article {
+	width: 100%;
+	background:rgba(24,8,33,.9);
+	padding:20px;
+	margin:20px 0;
+	color:#fff;
+	box-shadow:0 5px 5px 3px rgba(0, 0, 0, 0.25);
+	}
+}
+ 
+article h2 {
+	color:#fff;
+}
+ 
+article hr {
+	background:#F64740; /* Este es el color para la línea que subraya los artículos */
+	height:5px;
+	border:none;
+}
+ 
+article p {
+	line-height: 25px;
+}
+ 
+article h2, article p, article hr {
+	margin-bottom: 20px;
+}
+
+
+/*REDIMENSIÓN DE IMÁGENES Y VÍDEOS DE LOS ARTÍCULOS*/
+
+.redimendion {
+	width: 100%;
+}
+.redimension img {
+	width: 100%;
+}
+.redimension iframe {
+	height: 450px;
+}
+
+
+/*FOOTER, PIÉ DE PÁGINA*/
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans",sans-serif;
+}
+
+footer{
+  background: #f1f1f1;
+  padding: 90px 0;
+}
+
+.footer-container{
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+
+.logo{
+  width: 180px;
+}
+
+.social-media{
+  margin: 20px 0;
+}
+
+.social-media a{
+  color: #001a21;
+  margin-right: 25px;
+  font-size: 22px;
+  text-decoration: none;
+  transition: .3s linear;
+}
+
+.social-media a:hover{
+  color: #fc5c65;
+}
+
+.right-col h1{
+  font-size: 26px;
+}
+
+.border{
+  width: 100px;
+  height: 4px;
+  background: #fc5c65;
+}
+
+.newsletter-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.txtb{
+  flex: 1;
+  padding: 18px 40px;
+  font-size: 16px;
+  color: #293043;
+  background: #ddd;
+  border: none;
+  font-weight: 700;
+  outline: none;
+  border-radius: 30px;
+  min-width: 260px;
+}
+
+.btn{
+  padding: 18px 40px;
+  font-size: 16px;
+  color: #f1f1f1;
+  background: #fc5c65;
+  border: none;
+  font-weight: 700;
+  outline: none;
+  border-radius: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: opacity .3s linear;
+}
+
+.btn:hover{
+  opacity: .7;
+}
+
+.page-content{
+  min-height: 100vh;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width:960px) {
+  .footer-container{
+    max-width: 600px;
+  }
+  .right-col{
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .left-col{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width:700px){
+  .btn{
+    margin: 0;
+    width: 100%;
+    margin-top: 20px;
+    }
+}

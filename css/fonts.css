@@ -1,0 +1,107 @@
+/* https://icomoon.io   Recursos de iconos para los menús. Librería de Iconos iconmoon free version  */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?kkh8i6');
+  src:  url('fonts/icomoon.eot?kkh8i6#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?kkh8i6') format('truetype'),
+    url('fonts/icomoon.woff?kkh8i6') format('woff'),
+    url('fonts/icomoon.svg?kkh8i6#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-inicio:before {
+  content: "\e900";
+}
+.icon-imagen:before {
+  content: "\e90d";
+}
+.icon-musica:before {
+  content: "\e911";
+}
+.icon-film:before {
+  content: "\e913";
+}
+.icon-juego:before {
+  content: "\e916";
+}
+.icon-coin-dollar:before {
+  content: "\e93b";
+}
+.icon-coin-euro:before {
+  content: "\e93c";
+}
+.icon-credit-card:before {
+  content: "\e93f";
+}
+.icon-telefono:before {
+  content: "\e943";
+}
+.icon-contactar:before {
+  content: "\e945";
+}
+.icon-localizacion:before {
+  content: "\e947";
+}
+.icon-chat:before {
+  content: "\e970";
+}
+.icon-equipo:before {
+  content: "\e972";
+}
+.icon-trofeo:before {
+  content: "\e99e";
+}
+.icon-gift:before {
+  content: "\e99f";
+}
+.icon-crowdfunding:before {
+  content: "\e9bc";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-menudesplegable:before {
+  content: "\e9bf";
+}
+.icon-tierra:before {
+  content: "\e9ca";
+}
+.icon-question:before {
+  content: "\ea09";
+}
+.icon-circle-down:before {
+  content: "\ea43";
+}
+.icon-descripcion:before {
+  content: "\ea77";
+}
+.icon-facebook:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
